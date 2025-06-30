@@ -14,7 +14,7 @@ header, footer {
   background-color: #e67e22;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 2rem;
 }
 
 h1 {
@@ -23,6 +23,33 @@ h1 {
 
 h2 {
   color: #e67e22;
+}
+nav {
+  margin-top: 1em;
+  display: flex;
+  gap: 1em;
+  justify-content: center;
+}
+
+.nav-button {
+  padding: 0.5em 1em;
+  background-color: #4CAF50; /* earthy green */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s, transform 0.2s;
+}
+
+.nav-button:hover {
+  background-color: #388E3C;
+  transform: translateY(-2px);
+}
+
+.nav-button:active {
+  transform: translateY(0);
+  background-color: #2E7D32;
 }
 
 /* Slideshow */
