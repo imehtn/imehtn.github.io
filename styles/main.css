@@ -1,8 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+
 body {
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Inter', 'Segoe UI', Roboto, sans-serif;
   background: #fff4e6;
-  margin: 0;
+  margin: 50;
   color: #333;
+  padding:0cqi 0 2rem;
+  margin: 50;
 }
 
 header, footer {
@@ -13,7 +18,7 @@ header, footer {
 }
 
 h1, h2 {
-  color: #d35400;
+  color: white;
 }
 
 /* Slideshow */
