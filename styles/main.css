@@ -122,3 +122,32 @@ nav {
   40%    { opacity: 0; transform: translateY(-100%); }
   100%   { opacity: 0; transform: translateY(-100%); }
 }
+
+.coordinator {
+  margin: 3em 0;
+  padding: 2em;
+  background-color: #f9f9f9;
+}
+
+.coordinator-content {
+  display: flex;
+  align-items: center;
+  gap: 2em;
+  flex-wrap: wrap;
+}
+
+.coordinator-photo {
+  max-width: 300px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.coordinator-text {
+  flex: 1;
+  min-width: 250px;
+}
+
+.katelyn {
+  flex-direction: row-reverse;
+}
