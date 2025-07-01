@@ -55,6 +55,7 @@ h1 {
   color: #43b346; /* green */
   font-weight: 900;
   display: inline-block;
+  font-size: 2.5rem; 
   animation: semillas-pulse 2s ease-in-out infinite;
 }
 
