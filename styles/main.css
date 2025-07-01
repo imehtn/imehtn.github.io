@@ -153,6 +153,19 @@ nav {
   100%   { opacity: 0; transform: translateY(-100%); }
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers block items horizontally */
+  padding: 2em;
+}
+
+main section {
+  max-width: 800px; /* controls line length for readability */
+  text-align: center; /* centers h2 and p text */
+  margin-bottom: 3em;
+}
+
 .coordinator {
   margin: 3em 0;
   padding: 2em;
