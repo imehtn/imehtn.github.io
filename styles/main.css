@@ -264,7 +264,6 @@ main section {
   padding: 2em;
   background-color: #f9f9f9;
   border-radius: 16px; /* ← adds rounded corners */
-  color: green;
 }
 
 .coordinator-content {
@@ -272,6 +271,7 @@ main section {
   align-items: center;
   gap: 2em;
   flex-wrap: wrap;
+  color: green;
 }
 
 .coordinator-photo {
