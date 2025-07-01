@@ -36,6 +36,12 @@ header h1 {
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
+header h2{
+    color: #4e402b;
+    padding: 0.5rem;
+    font-size: 2rem
+}
+
 footer{
   background-color: rgb(152, 181, 138);
   color: white;
