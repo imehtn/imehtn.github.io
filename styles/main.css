@@ -8,7 +8,7 @@ html, body {
   display: felx;
   flex-direction: column;
 
-  background: #9baa6c;
+  background: #75970f;
   margin: 50;
   color: #333;
   padding:0cqi 0 2rem;
@@ -20,7 +20,7 @@ main {
 }
 
 header{
-  background: radial-gradient(circle, white 25%, #9baa6c 100%);
+  background: radial-gradient(circle, white 25%,#75970f 90%);
   color: white;
   text-align: center;
   padding: 3rem;
@@ -76,11 +76,12 @@ h2 {
 nav {
   margin-top: 1em;
   display: flex;
-  gap: 1em;
+  gap: 2em;
   justify-content: center;
 }
 
 .nav-button {
+  font-size: 1rem; 
   padding: 0.5em 1em;
   background-color: #4CAF50; /* earthy green */
   color: white;
