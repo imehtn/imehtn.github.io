@@ -149,26 +149,27 @@ nav {
   min-width: 250px;
 }
 
-.katelyn {
+.coordinator-content.katelyn {
   flex-direction: row-reverse;
 }
 
 .scrolling-banner {
   overflow: hidden;
   white-space: nowrap;
-  background-color: #e67e22; /* light greenish background */
+  background-color: #e67e22; 
   padding: 0.5em 0;
   border-top: 3px solid #ccc;
   border-bottom: 3px solid #ccc;
   font-weight: 1000;
   font-size: 1.1rem;
   color: white;
+  position: relative;
 }
 
 .scrolling-content {
-  display: inline-block;
-  white-space: nowrap;
-  animation: scroll-left 10s linear infinite;
+  display: flex;
+  width: max-content;
+  animation: scroll-left 20 linear infinite;
 }
 
 @keyframes scroll-left {
