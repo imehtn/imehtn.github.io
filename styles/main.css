@@ -24,7 +24,6 @@ header{
   color: white;
   text-align: center;
   padding: 3rem;
-  font-size: 2rem; 
   width: 100%;
   box-sizing: border-box;
   margin: 0;
@@ -35,7 +34,7 @@ header h1 {
   color: #4e402b;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   font-size: 1.5rem;
-  padding: 0.5rem;
+  padding: 0.2rem;
 }
 
 footer{
