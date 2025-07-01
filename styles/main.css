@@ -106,6 +106,7 @@ nav {
 .slideshow {
   position: relative;
   max-width: 100%;
+  padding: 1rem;
   height: auto;
   max-width: 800px;
   aspect-ratio: 16 / 9; /* Maintain consistent image shape */
