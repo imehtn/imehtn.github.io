@@ -289,13 +289,12 @@ main section {
 .scrolling-banner {
   font-family: 'Inter', sans-serif;
   font-weight: 100;
-  font-size: 1rem;
+  font-size: 0.7rem;
   overflow: hidden;
   background-color: white; 
   padding: 0.5em 0;
   border-top: 3px solid #5cad5f;
   border-bottom: 3px solid #5cad5f;
-  font-size: 1.5rem;
   color: #5cad5f;
   position: relative;
 }
