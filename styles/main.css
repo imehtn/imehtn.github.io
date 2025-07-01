@@ -105,33 +105,32 @@ nav {
 }
 .slideshow {
   position: relative;
-  max-width: 100%;
-  padding: 2rem;
-  height: auto;
-  max-width: 800px;
-  aspect-ratio: 16 / 9; /* Maintain consistent image shape */
-  overflow: hidden;
-  margin: auto;
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 1rem;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
 }
 
 .slides {
-  position: relative;
-  height: 100%;
   display: flex;
-  transition: transform 0.5s ease;
-  width:100%
+  transition: transform 0.5s ease-in-out;
+  width: 100%;
 }
 
 .slide {
   flex-shrink: 0;
   width: 100%;
   object-fit: contain;
+  border-radius: 12px;
 }
 
 .slides-wrapper {
   overflow: hidden;
   width: 100%;
   aspect-ratio: 16 / 9;
+  position: relative;
 }
 
 .slides img {
@@ -163,24 +162,29 @@ nav {
   cursor: pointer;
   z-index: 10;
 }
-
-.prev {
-  left: 10px;
+.prev, .next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.4);
+  border: none;
+  color: white;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 6px;
 }
 
-.next {
-  right: 10px;
-}
+.prev { left: 10px; }
+.next { right: 10px; }
 
-/* Dots */
 .dots {
   text-align: center;
-  position: absolute;
-  bottom: 10px;
-  width: 100%;
+  margin-top: 0.5rem;
 }
 
-.dots .dot {
+.dot {
   display: inline-block;
   width: 12px;
   height: 12px;
@@ -190,8 +194,8 @@ nav {
   cursor: pointer;
 }
 
-.dots .active-dot {
-  background-color: #555;
+.dot.active-dot {
+  background-color: #5cad5f;
 }
 
 .coordinator-grid {
