@@ -214,8 +214,8 @@ main section {
 }
 
 .scrolling-content span {
-  word-spacing: 4rem; /* 👈 This adds space between words */
-  padding-right: 4rem; /* space between looped sections */
+  word-spacing: 10rem; /* 👈 This adds space between words */
+  padding-right: 10rem; /* space between looped sections */
 }
 
 @keyframes scroll-left {
