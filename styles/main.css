@@ -70,7 +70,7 @@ h1 {
 
 
 h2 {
-  color: #e67e22;
+  color: white;
 }
 
 nav {
@@ -190,6 +190,8 @@ main section {
   margin: 3em 0;
   padding: 2em;
   background-color: #f9f9f9;
+  border-radius: 16px; /* ← adds rounded corners */
+
 }
 
 .coordinator-content {
@@ -203,7 +205,7 @@ main section {
   max-width: 200px;
   width: 100%;
   border-radius: 12px;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 .coordinator-text {
@@ -217,7 +219,7 @@ main section {
 
 .scrolling-banner {
   overflow: hidden;
-  background-color: #e67e22; 
+  background-color: #4bb654; 
   padding: 0.5em 0;
   border-top: 3px solid #ccc;
   border-bottom: 3px solid #ccc;
