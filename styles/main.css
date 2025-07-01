@@ -20,7 +20,7 @@ main {
 }
 
 header{
-  background: radial-gradient(circle, white 25%,rgb(152, 181, 138) 90%);
+  background: radial-gradient(circle, white 35%,rgb(152, 181, 138) 90%);
   color: white;
   text-align: center;
   padding: 3rem;
