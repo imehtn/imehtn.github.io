@@ -1,17 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 
-body {
+html, body {
   font-family: 'Proxima Nova', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #9ac197;
+  height: 100%;
+  margin: 0;
+  display: felx;
+  flex-direction: column;
+
+  background: #9baa6c;
   margin: 50;
   color: #333;
   padding:0cqi 0 2rem;
   margin: 50;
 }
 
+main {
+  flex: 1; /* Pushes the footer to the bottom when content is short */
+}
+
 header{
-  background: radial-gradient(circle, white 20%, #9baa6c 100%);
+  background: radial-gradient(circle, white 25%, #9baa6c 100%);
   color: white;
   text-align: center;
   padding: 3rem;
@@ -28,7 +37,8 @@ footer{
   color: white;
   text-align: center;
   padding: 0.5rem;
-  font-size: 50;
+  font-size: 1.25rem; 
+  margin-top: auto;
 }
 
 h1 {
