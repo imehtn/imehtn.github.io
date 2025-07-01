@@ -164,21 +164,25 @@ nav {
 
 .scrolling-banner {
   overflow: hidden;
-  white-space: nowrap;
   background-color: #e67e22; 
   padding: 0.5em 0;
   border-top: 3px solid #ccc;
   border-bottom: 3px solid #ccc;
-  font-weight: 1000;
-  font-size: 1.1rem;
+  font-weight: bold;
+  font-size: 1.5rem;
   color: white;
   position: relative;
 }
 
 .scrolling-content {
-  display: flex;
+  display: inline-block;
   width: max-content;
-  animation: scroll-left 20 linear infinite;
+  animation: scroll-left 20s linear infinite;
+}
+
+.scrolling-content span {
+  word-spacing: 4rem; /* 👈 This adds space between words */
+  padding-right: 4rem; /* space between looped sections */
 }
 
 @keyframes scroll-left {
