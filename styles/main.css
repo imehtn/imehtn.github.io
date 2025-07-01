@@ -11,7 +11,7 @@ body {
 }
 
 header{
-  background: radial-gradient(circle, white 0%, #bfff00 100%);
+  background: radial-gradient(circle, white 20%, #9baa6c 100%);
   color: white;
   text-align: center;
   padding: 3rem;
@@ -24,10 +24,10 @@ header h1 {
 }
 
 footer{
-  background-color: #e67e22;
+  background-color: #43b346;
   color: white;
   text-align: center;
-  padding: 1rem;
+  padding: 0.5rem;
   font-size: 50;
 }
 
