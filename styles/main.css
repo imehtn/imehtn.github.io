@@ -3,7 +3,7 @@
 
 body {
   font-family: 'Proxima Nova', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  background: #fff4e6;
+  background: #9ac197;
   margin: 50;
   color: #333;
   padding:0cqi 0 2rem;
@@ -14,8 +14,8 @@ header{
   background: radial-gradient(circle, white 0%, #bfff00 100%);
   color: white;
   text-align: center;
-  padding: 2rem;
-  font-size: 100%; /* fixed: `100` is invalid, should be `100%`, `2rem`, etc. */
+  padding: 3rem;
+  font-size: 100%; 
 }
 
 header h1 {
