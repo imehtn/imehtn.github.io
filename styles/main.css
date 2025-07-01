@@ -138,7 +138,7 @@ nav {
 }
 
 .coordinator-photo {
-  max-width: 300px;
+  max-width: 200px;
   width: 100%;
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -151,4 +151,31 @@ nav {
 
 .katelyn {
   flex-direction: row-reverse;
+}
+
+.scrolling-banner {
+  overflow: hidden;
+  white-space: nowrap;
+  background-color: #e8f5e9; /* light greenish background */
+  padding: 0.5em 0;
+  border-top: 1px solid #ccc;
+  border-bottom: 1px solid #ccc;
+  font-weight: 500;
+  font-size: 1.1rem;
+  color: #2e7d32;
+}
+
+.scrolling-content {
+  display: inline-block;
+  white-space: nowrap;
+  animation: scroll-left 10s linear infinite;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
