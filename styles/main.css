@@ -8,7 +8,7 @@ html, body {
   display: felx;
   flex-direction: column;
 
-  background: #cae087;
+  background: rgb(152, 181, 138) 90%;
   margin: 50;
   color: #333;
   padding:0cqi 0 2rem;
@@ -37,8 +37,8 @@ header h1 {
 }
 
 footer{
-  background-color: #43b346;
-  color: white;
+  background-color: white;
+  color: rgb(152, 181, 138) 90%;
   text-align: center;
   padding: 0.5rem;
   font-size: 1.25rem; 
@@ -52,7 +52,7 @@ h1 {
 }
 
 .semillas-highlight {
-  color: #43b346; /* green */
+  color: #5cad5f; /* green */
   font-weight: 900;
   display: inline-block;
   font-size: 2.5rem; 
@@ -84,7 +84,7 @@ nav {
 .nav-button {
   font-size: 1rem; 
   padding: 0.5em 1em;
-  background-color: #4CAF50; /* earthy green */
+  background-color: #5cad5f; /* earthy green */
   color: white;
   border: none;
   border-radius: 6px;
@@ -219,6 +219,7 @@ main section {
 }
 
 .scrolling-banner {
+  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   overflow: hidden;
   background-color: white; 
   padding: 0.5em 0;
