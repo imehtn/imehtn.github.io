@@ -37,8 +37,8 @@ header h1 {
 }
 
 footer{
-  background-color: white;
-  color: rgb(152, 181, 138) 90%;
+  background-color: rgb(152, 181, 138);
+  color: white;
   text-align: center;
   padding: 0.5rem;
   font-size: 1.25rem; 
@@ -219,14 +219,14 @@ main section {
 }
 
 .scrolling-banner {
-  font-family: 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
   overflow: hidden;
   background-color: white; 
   padding: 0.5em 0;
   border-top: 3px solid rgb(152, 181, 138);
   border-bottom: 3px solid rgb(152, 181, 138);
   font-weight: bold;
-  font-size: 1.5rem;
+  font-size: 2rem;
   color: rgb(152, 181, 138);
   position: relative;
 }
