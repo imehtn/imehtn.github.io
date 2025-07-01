@@ -156,13 +156,13 @@ nav {
 .scrolling-banner {
   overflow: hidden;
   white-space: nowrap;
-  background-color: #e8f5e9; /* light greenish background */
+  background-color: #e67e22; /* light greenish background */
   padding: 0.5em 0;
-  border-top: 1px solid #ccc;
-  border-bottom: 1px solid #ccc;
-  font-weight: 500;
+  border-top: 3px solid #ccc;
+  border-bottom: 3px solid #ccc;
+  font-weight: 1000;
   font-size: 1.1rem;
-  color: #2e7d32;
+  color: white;
 }
 
 .scrolling-content {
