@@ -10,11 +10,20 @@ body {
   margin: 50;
 }
 
-header, footer {
+header{
   background-color: #e67e22;
   color: white;
   text-align: center;
   padding: 2rem;
+  font-size: 100;
+}
+
+footer{
+  background-color: #e67e22;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  font-size: 50;
 }
 
 h1 {
