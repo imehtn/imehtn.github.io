@@ -11,11 +11,16 @@ body {
 }
 
 header{
-  background-color: #e67e22;
+  background: radial-gradient(circle, white 0%, #bfff00 100%);
   color: white;
   text-align: center;
   padding: 2rem;
-  font-size: 100;
+  font-size: 100%; /* fixed: `100` is invalid, should be `100%`, `2rem`, etc. */
+}
+
+header h1 {
+  color: #4e402b;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
 }
 
 footer{
@@ -33,7 +38,7 @@ h1 {
 }
 
 .semillas-highlight {
-  color: #4CAF50; /* green */
+  color: #43b346; /* green */
   font-weight: 900;
   display: inline-block;
   animation: semillas-pulse 2s ease-in-out infinite;
