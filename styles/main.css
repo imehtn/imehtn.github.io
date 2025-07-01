@@ -219,14 +219,14 @@ main section {
 }
 
 .scrolling-banner {
-  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  font-family: 'Inter', sans-serif;
+  font-weight: 100;
   overflow: hidden;
   background-color: white; 
   padding: 0.5em 0;
   border-top: 3px solid rgb(152, 181, 138);
   border-bottom: 3px solid rgb(152, 181, 138);
-  font-weight: bold;
-  font-size: 2rem;
+  font-size: 1.5rem;
   color: rgb(152, 181, 138);
   position: relative;
 }
