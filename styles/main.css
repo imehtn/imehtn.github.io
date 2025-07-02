@@ -121,7 +121,7 @@ body {
   margin: 2rem auto; /* ✅ this centers it horizontally */
   border-radius: 16px;
   aspect-ratio:16/9;
-  margin: 0 auto;
+  flex-direction: column;
 }
 
 .wrapper:before, .wrapper:after {
@@ -145,18 +145,22 @@ body {
 
 .wrapper .track {
 	display: flex;
+  flex-wrap: nowrap;
+  width: max-content;
 	animation: scroll 20s linear infinite;
 }
 
 .wrapper .logo {
-    flex: 0 0 auto;
-	width: 600px;
+  flex: 0 0 auto;
+	height: 100%;
+  width: 100%;
 }
 
 .wrapper .logo img {
 	height: 100%;
-    width: 100%;
-    object-fit: cover;
+  width: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 @keyframes  scroll {
@@ -272,12 +276,13 @@ main section {
   overflow: hidden;
   background-color: rgb(208, 247, 214); 
   padding: 0.5em 0; 
+  border-top-left-radius: 16px;
+  border-top-right-radius: 16px;
   border-top: 3px solid #5cad5f;/*
   border-bottom: 3px solid #5cad5f;*/
   color: #5cad5f;
   position: relative;
-  margin-bottom:0;
-}
+  flex-shrink: 0}
 
 .scrolling-content {
   display: inline-block;
