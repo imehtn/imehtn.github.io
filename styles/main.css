@@ -30,7 +30,6 @@ header h1 {
   color: #4e402b;
   text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
   font-size: 1.5rem;
-  padding: 0.2rem;
 }
 
 footer{
@@ -111,8 +110,8 @@ body {
 .wrapper {
 	background-color: #E1E2E2;
 	overflow: hidden;
-	position: relative;
 	width: 90%;
+  max-width: 960px;
 	display: flex;
 	align-items: center;
 	padding: 0 20px;
@@ -272,7 +271,7 @@ main section {
   font-weight: 100;
   font-size: 1.2rem;
   overflow: hidden;
-  background-color: rgb(208, 247, 214); 
+  background-color: #e8ffe3f0; 
   padding: 0.5em 0; 
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
@@ -280,7 +279,8 @@ main section {
   border-bottom: 3px solid #5cad5f;*/
   color: #5cad5f;
   position: relative;
-  flex-shrink: 0}
+  flex-shrink: 0;
+}
 
 .scrolling-content {
   display: inline-block;
