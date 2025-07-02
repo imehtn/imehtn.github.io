@@ -3,16 +3,13 @@
 
 html, body {
   font-family: 'Proxima Nova', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
-  height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
+  padding: 0;
+  height: 100%;
 
-  background: rgb(152, 181, 138) 90%;
-  margin: 0 auto;
+  background-color: rgb(152, 181, 138) 90%;
   color: #333;
-  padding:0 0 2rem;
-  margin: 50;
+  overflow-x: hidden;
 }
 
 main {
@@ -123,7 +120,7 @@ nav {
   flex: 0 0 100%;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover;
   display:block;
 }
 
@@ -144,7 +141,7 @@ nav {
   border: none;
   color: white;
   font-size: 2rem;
-  padding: 0.5rem 1 rem;
+  padding: 0.5rem 1rem;
   cursor: pointer;
   z-index: 10;
   border-radius: 6px;
