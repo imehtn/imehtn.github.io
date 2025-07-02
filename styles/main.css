@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
 
 
-html, body {
+html {
   font-family: 'Proxima Nova', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   margin: 0;
   padding: 0;
@@ -99,71 +99,66 @@ nav {
   transform: translateY(0);
   background-color: #2E7D32;
 }
-.slideshow {
-  position: relative;
-  max-width: 90%;
-  margin: 2rem auto;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  background: #fff;
-}
-.slides {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
-  height:100%
+
+body {
+    background-color: rgb(152, 181, 138);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 }
 
-.slide {
-  flex: 0 0 100%;
-  width: 100%;
-  object-fit: cover;
-  display: block;
+.wrapper {
+	background-color: #E1E2E2;
+	height: 500px;
+	overflow: hidden;
+	position: relative;
+	width: 90%;
+	display: flex;
+	align-items: center;
+	padding: 0 20px;
 }
 
-.slides-wrapper {
-  overflow: hidden;
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  position: relative;
+.wrapper:before, .wrapper:after {
+	content: "";
+	position: absolute;
+	height: 500px;
+	width: 600px;
+	z-index: 2;
 }
 
-/* Arrows */
-.prev, .next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  background-color: rgba(0,0,0,0.5);
-  border: none;
-  color: white;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
-  z-index: 10;
-  border-radius: 6px;
+.wrapper:after {
+	right: 0;
+	top: 0;
+	transform: rotateZ(180deg);
 }
 
-
-.prev { left: 10px; }
-.next { right: 10px; }
-
-.dots {
-  text-align: center;
-  margin-top: 0.5rem;
+.wrapper:before {
+	left: 0;
+	top: 0;
 }
 
-.dot {
-  display: inline-block;
-  width: 12px;
-  height: 12px;
-  margin: 0 5px;
-  background-color: #ccc;
-  border-radius: 50%;
-  cursor: pointer;
+.wrapper .track {
+	display: flex;
+	width: calc(150px * 10);
+	animation: scroll 15s 0.5s linear infinite;
 }
 
-.dot.active-dot {
-  background-color: #5cad5f;
+.wrapper .logo {
+	width: 600px;
+}
+
+.wrapper .logo img {
+	height: 500px;
+}
+
+@keyframes  scroll {
+	from {
+		transform: translateX(0);
+	}
+	to {
+		transform: translateX(calc(-150px * 5));
+	}
 }
 
 .coordinator-grid {
