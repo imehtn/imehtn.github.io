@@ -141,7 +141,6 @@ body {
 
 .wrapper .track {
 	display: flex;
-	width: calc(600px * 10);
 	animation: scroll 20s linear infinite;
 }
 
@@ -158,10 +157,10 @@ body {
 
 @keyframes  scroll {
 	from {
-		transform: translateX(0);
+		transform: translateX(0%);
 	}
 	to {
-		transform: translateX(calc(-50));
+		transform: translateX(calc(-50%));
 	}
 }
 
