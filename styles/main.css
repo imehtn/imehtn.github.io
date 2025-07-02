@@ -109,16 +109,14 @@ body {
 }
 
 .wrapper {
-  margin-top:0;
 	background-color: #E1E2E2;
-	height: 400px;
 	overflow: hidden;
 	position: relative;
 	width: 90%;
 	display: flex;
 	align-items: center;
 	padding: 0 20px;
-  margin: 2rem auto; /* ✅ this centers it horizontally */
+  margin: 2rem auto; 
   border-radius: 16px;
   aspect-ratio:16/9;
   flex-direction: column;
@@ -152,7 +150,7 @@ body {
 
 .wrapper .logo {
   flex: 0 0 auto;
-	height: 100%;
+	height: calc(100%/1);
   width: 100%;
 }
 
