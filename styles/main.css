@@ -146,11 +146,14 @@ body {
 }
 
 .wrapper .logo {
+    flex: 0 0 auto;
 	width: 600px;
 }
 
 .wrapper .logo img {
-	height: 500px;
+	height: 100%;
+    width: 100%;
+    object-fit: cover;
 }
 
 @keyframes  scroll {
