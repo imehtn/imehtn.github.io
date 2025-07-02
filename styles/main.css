@@ -110,21 +110,20 @@ body {
 
 .wrapper {
 	background-color: #E1E2E2;
-	height: 500px;
+	height: 400px;
 	overflow: hidden;
 	position: relative;
 	width: 90%;
 	display: flex;
 	align-items: center;
 	padding: 0 20px;
-    padding: 0 20px;
     margin: 2rem auto; /* ✅ this centers it horizontally */
 }
 
 .wrapper:before, .wrapper:after {
 	content: "";
 	position: absolute;
-	height: 500px;
+	height: 400px;
 	width: 600px;
 	z-index: 2;
 }
@@ -142,8 +141,8 @@ body {
 
 .wrapper .track {
 	display: flex;
-	width: calc(150px * 10);
-	animation: scroll 15s 0.5s linear infinite;
+	width: calc(600px * 10);
+	animation: scroll 20s linear infinite;
 }
 
 .wrapper .logo {
@@ -159,7 +158,7 @@ body {
 		transform: translateX(0);
 	}
 	to {
-		transform: translateX(calc(-150px * 5));
+		transform: translateX(calc(-50));
 	}
 }
 
