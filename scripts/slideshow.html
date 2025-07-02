@@ -6,6 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const slidesContainer = document.querySelector(".slides");
   const dotsContainer = document.querySelector(".dots");
   const slideCount = slides.length;
+  slidesContainer.style.width = `${slideCount * 100}%`;
 
   for (let i = 0; i < slideCount; i++) {
     const dot = document.createElement("span");

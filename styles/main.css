@@ -111,22 +111,19 @@ nav {
 .slides {
   display: flex;
   transition: transform 0.5s ease-in-out;
-  width: 100%;
   height:100%
 }
 
 .slide {
   flex: 0 0 100%;
   width: 100%;
-  height: 100%;
   object-fit: cover;
-  display:block;
+  display: block;
 }
 
 .slides-wrapper {
   overflow: hidden;
   width: 100%;
-  height: auto;
   aspect-ratio: 16 / 9;
   position: relative;
 }
