@@ -71,10 +71,8 @@ h2 {
 }
 
 nav {
-  margin-top: 1em;
-  display: flex;
-  gap: 1.5em;
-  justify-content: center;
+  position: relative;
+  z-index: 3;
 }
 
 .nav-button {
@@ -127,6 +125,7 @@ body {
 	height: 400px;
 	width: 600px;
 	z-index: 2;
+  pointer-events: none;
 }
 
 .wrapper:after {
