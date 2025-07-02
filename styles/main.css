@@ -6,8 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-
-  background-color: rgb(152, 181, 138) 90%;
+  background-color: rgb(152, 181, 138);
   color: #333;
   overflow-x: hidden;
 }
@@ -287,8 +286,8 @@ main section {
 }
 
 .scrolling-content span {
-  word-spacing: 10rem; /* 👈 This adds space between words */
-  padding-right: 10rem; /* space between looped sections */
+  word-spacing: 7rem; /* 👈 This adds space between words */
+  padding-right: 7rem; /* space between looped sections */
 }
 
 @keyframes scroll-left {
