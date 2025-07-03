@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
-
-
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;600&display=swap');
 html {
   font-family: 'Proxima Nova', 'Inter', 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
   margin: 0;
@@ -16,8 +17,6 @@ main {
 }
 
 header{
-  background: radial-gradient(circle, white 40%,rgb(152, 181, 138) 90%);
-  color: white;
   text-align: center;
   padding: 3rem;
   width: 100%;
@@ -27,8 +26,8 @@ header{
 }
 
 header h1 {
-  color: #4e402b;
-  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  color: #1e6623;
+  background: transparent;
   font-size: 1.5rem;
 }
 
@@ -46,9 +45,19 @@ h1 {
     font-weight: normal;
     font-size: 1.5rem
 }
+p{
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 1.25rem;
+  line-height: 1.8;
+  color: #333;
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+  font-weight: 500;
+}
 
 .semillas-highlight {
-  color: #5cad5f; /* green */
+  color: #4e402b; /* green */
   font-weight: 900;
   display: inline-block;
   font-size: 3.5rem; 
@@ -65,21 +74,49 @@ h1 {
   }
 }
 
+@font-face {
+  font-family: 'Realce';
+  src: url('fonts/Realce-Black.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+}
 
 h2 {
-  color: white;
-  font-size: 2rem;
+  position: relative;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  font-weight: 700;
+}
+
+h2::after {
+  content: '';
+  position: absolute;
+  bottom: -10px; /* space between text and underline */
+  left: 50%;
+  transform: translateX(-50%);
+  height: 6px;
+  width: 320px; /* or whatever fixed length you want */
+  max-width: 100%;
+  background: linear-gradient(to right, transparent, #4e402b, transparent);
+  border-radius: 3px;
 }
 
 nav {
-  position: relative;
+  display: flex;
+  justify-content: center; /* centers buttons horizontally */
+  gap: 1.5rem;             /* space between buttons */
+  margin-top: 1rem;        /* optional: adds space below header title */
+  flex-wrap: wrap;         /* allows buttons to wrap on smaller screens */
   z-index: 3;
 }
 
 .nav-button {
   font-size: 1rem; 
   padding: 0.5em 1em;
-  background-color: #5cad5f; /* earthy green */
+  background-color: #4e402b; /* earthy green */
   color: white;
   border: none;
   border-radius: 6px;
@@ -89,7 +126,7 @@ nav {
 }
 
 .nav-button:hover {
-  background-color: #388E3C;
+  background-color: #766e68;
   transform: translateY(-2px);
 }
 
@@ -99,28 +136,41 @@ nav {
 }
 
 body {
-  background-color: rgb(152, 181, 138);
-	height: 100vh;
-	display: block;
-	align-items: center;
-	justify-content: center;
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  background-image: linear-gradient(90deg, rgb(214, 241, 214), #98b58a, #e1e2e2);
+  background-size: 400% 400%;
+  background-position: 0% 50%;
+  animation: gradientShift 15s ease infinite;
+  background-attachment: fixed;
+  font-family: 'Proxima Nova', 'Inter', sans-serif;
+  overflow-x: hidden;
+}
+
+@keyframes gradientShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
 }
 
 .wrapper {
-	background-color: #E1E2E2;
-	overflow: hidden;
 	width: 90%;
   max-width: 960px;
-	display: flex;
-	align-items: center;
-	padding: 0 20px;
-  margin: 2rem auto; 
+  margin: 0 auto 2rem auto;
   border-radius: 16px;
-  aspect-ratio:16/9;
+  overflow: hidden;
+  background-color: #e1e2e2;
+  display: flex;
   flex-direction: column;
-  overflow-x: auto;
-  -ms-overflow-style: none;
-  scrollbar-width: none;
+  align-items: center;
+  min-height: 50vh; /* fills taller screens better */
+}
+
+.inner-wrapper {
+  padding: 0 20px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .wrapper:before, .wrapper:after {
@@ -151,10 +201,8 @@ body {
 }
 
 .wrapper .logo {
+  
   flex: 0 0 300px;
-  /* aspect-ratio: 16/9; */
-	/* height: 100%; */
-  /* width: 300px; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -182,6 +230,27 @@ body {
 	100% {
 		transform: translateX(-50%);
 	}
+}
+
+@media (max-width: 600px) {
+  .wrapper {
+    width: 100%;
+    min-height: auto;
+    padding: 0;
+    border-radius: 0;
+  }
+
+  .wrapper .logo {
+    flex: 0 0 100vw;
+    height: 200px; /* or any fixed height for better UX */
+  }
+
+  .wrapper .logo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: auto;
+  }
 }
 
 .coordinator-grid {
@@ -258,6 +327,12 @@ main section {
 
 .coordinator h2{
   color: green;
+  font-family: 'JetBrains Mono', 'Courier New', monospace;;
+  font-size: 2rem;
+}
+
+.coordinator h2::after {
+  content: none;
 }
 
 .coordinator-content {
@@ -294,9 +369,9 @@ main section {
   padding: 0.5em 0; 
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
-  border-top: 3px solid #5cad5f;/*
+  border-top: 3px solid #4e402b;/*
   border-bottom: 3px solid #5cad5f;*/
-  color: #5cad5f;
+  color: #4e402b;
   position: relative;
   flex-shrink: 0;
 }
