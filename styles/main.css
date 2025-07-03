@@ -149,15 +149,20 @@ body {
 
 .wrapper .logo {
   flex: 0 0 auto;
-	height: auto;
+	height: 100%;
   width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Crop any excess */
 }
 
 .wrapper .logo img {
-	height: auto;
-  width: 100%;
+	min-width: 100%;
+  min-height: 100%;
   object-fit: cover;
   object-position: center;
+  display: block;
 }
 
 @keyframes  scroll {
