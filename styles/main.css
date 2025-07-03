@@ -68,6 +68,7 @@ h1 {
 
 h2 {
   color: white;
+  font-size: 2rem;
 }
 
 nav {
@@ -245,6 +246,10 @@ main section {
   padding: 2em;
   background-color: #f9f9f9;
   border-radius: 16px; /* ← adds rounded corners */
+}
+
+.coordinator h2{
+  color: green;
 }
 
 .coordinator-content {
