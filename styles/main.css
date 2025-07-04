@@ -29,13 +29,14 @@ header h1 {
   color: #1e6623;
   background: transparent;
   font-size: 1.5rem;
+  font-weight: 600;
 }
 
-footer{
-  background-color: rgb(152, 181, 138);
+.footer {
+  background-color: #4e402b;
   color: white;
   text-align: center;
-  padding: 0.5rem;
+  padding: 1rem;
   font-size: 1rem; 
   margin-top: auto;
 }
@@ -116,7 +117,7 @@ nav {
 .nav-button {
   font-size: 1rem; 
   padding: 0.5em 1em;
-  background-color: #4e402b; /* earthy green */
+  background-color: #1e6623; /* earthy green */
   color: white;
   border: none;
   border-radius: 6px;
@@ -251,15 +252,13 @@ body {
     object-fit: cover;
     aspect-ratio: auto;
   }
+
+  .wrapper .track {
+    animation-duration: 10s; /* twice as fast */
+  }
 }
 
-.coordinator-grid {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1rem;
-  justify-content: center;
-  padding-top: 1rem;
-}
+
 
 .profile img {
   border-radius: 100px;
@@ -318,11 +317,36 @@ main section {
   margin-bottom: 3em;
 }
 
+.coordinator-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  padding-top: 0.5rem;
+}
+
 .coordinator {
-  margin: 3em 0;
+  position: relative;
+  background-color: #ffffff;
   padding: 2em;
-  background-color: #f9f9f9;
-  border-radius: 16px; /* ← adds rounded corners */
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+  top: -4px; /* 👈 lifts the white card up slightly */
+  left: -4px;
+}
+
+.coordinator::before {
+  content: '';
+  position: absolute;
+  top: 30px;
+  left: 30px;
+  width: 100%;
+  height: 100%;
+  background-color: #d6e8d1; 
+  border-radius: 16px;
+  z-index: -1;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
 .coordinator h2{
@@ -340,7 +364,6 @@ main section {
   align-items: center;
   gap: 2em;
   flex-wrap: wrap;
-  color: green;
 }
 
 .coordinator-photo {
@@ -358,6 +381,8 @@ main section {
 .coordinator-content.katelyn {
   flex-direction: row-reverse;
 }
+
+
 
 .scrolling-banner {
   font-family: Arial, 'Inter', sans-serif;
