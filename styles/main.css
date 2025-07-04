@@ -87,6 +87,8 @@ p{
 }
 
 .semillas-highlight {
+  font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  font-weight: 10000;
   color: #4e402b; /* green */
   font-weight: 900;
   display: inline-block;
@@ -100,7 +102,7 @@ p{
     transform: scale(1);
   }
   50% {
-    transform: scale(1.08); /* slightly bigger */
+    transform: scale(1.2); /* slightly bigger */
   }
 }
 
