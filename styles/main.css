@@ -322,6 +322,11 @@ body {
 
   }
 
+    
+  .coordinator h2{
+    font-size: 1.5rem;
+  }
+
   /* 2) For Lauren (DOM order is img→text), reverse the column so text sits on top */
   .coordinator-content.lauren {
     flex-direction: column-reverse !important;
@@ -490,11 +495,12 @@ main section {
 }
 
 .coordinator h2{
+  text-transform: none;
   color: #4e402b;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family:monospace;
   font-size: 2rem;
   margin-top: 2rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
   font-weight: 600;
 }
 
