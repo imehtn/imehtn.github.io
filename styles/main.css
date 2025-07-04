@@ -231,7 +231,6 @@ body {
   display: none;
 }
 
-
 @keyframes  scroll {
 	0% {
 		transform: translateX(0%);
@@ -243,25 +242,30 @@ body {
 
 @media (max-width: 600px) {
   .wrapper {
-    width: 100%;
-    padding: 0;
-    border-radius: 0;
-    overflow-x: scroll;
+    height: 160px; /* or whatever height you want */
+    display: flex;
+    align-items: stretch;
   }
 
   .wrapper .logo {
-    flex: 0 0 100vw;
-    height: 180; /* or any fixed height for better UX */
+   width: auto;              /* let height drive the aspect */
+    height: 100%;             /* fill the 160px wrapper */
+    object-fit: cover;        /* crop/zoom to cover */
+    object-position: center;  /* center the crop */
   }
 
   .wrapper .logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
+    display: block;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
   }
 
   .wrapper .track {
-    animation-duration: 10s; /* twice as fast */
+    animation-duration: 20s; /* twice as fast */
   }
 
   .scrolling-banner {
@@ -281,48 +285,56 @@ body {
   }
 
     .coordinator {
-    padding: 1.25rem;
-    border-radius: 12px;
+      /* cancel the desktop “left:-4px” */
+    left: initial !important;
+    /* slide out by half the extra viewport width */
+    margin-left: calc((100vw - 100%) / -2);
   }
 
   /* Slightly reduce the offset “shadow card” behind */
   .coordinator::before {
-    top: 16px;
-    left: 16px;
-    border-radius: 12px;
+   /* align its left edge with the white card */
+    left: 20px !important;
+    /* drop its width by 24px so it doesn’t reach the white card’s right */
+    width: calc(100% - 24px);
+    /* cancel any right rule you had before */
+    right: auto !important;
   }
 
   .coordinator-content {
-    flex-direction: column;
+    display: flex;
+    flex-direction: column !important;
     align-items: center;
     text-align: center;
   }
 
   .coordinator-photo {
     max-width: 120px;
-    margin-bottom: 1rem;
+    margin-bottom: 0;
     border-radius: 10px;
+    align-items: center;
+
+  }
+
+  /* 2) For Lauren (DOM order is img→text), reverse the column so text sits on top */
+  .coordinator-content.lauren {
+    flex-direction: column-reverse !important;
   }
 
   .coordinator-text {
-    flex: none;
-    width: 100%;
-    min-width: unset;
-    padding: 0 1rem;
-    font-size: 0.95rem;
-    line-height: 1.5;
-    margin-bottom: 0.5rem;
+   padding: 0 0;
+   margin: 0;
   }
 
   .coordinator-text p {
     font-size: 1rem;
     line-height: 1.6;
-    margin-bottom: 0.75rem;
+    margin-bottom: 0.5rem;
   }
 
   .coordinator h2 {
     font-size: 1.2rem;
-    margin-bottom: 0.5rem
+    margin-bottom: 2rem
   }
 }
 
@@ -330,6 +342,17 @@ body {
   .coordinator-grid {
     padding-left: 1rem;
     padding-right: 1rem;
+  }
+}
+
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
 }
 
@@ -409,6 +432,14 @@ main section {
   z-index: 2;
   top: -4px; /* 👈 lifts the white card up slightly */
   left: -4px;
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.coordinator.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
 
 .coordinator::before {
@@ -428,6 +459,8 @@ main section {
   font-family: 'JetBrains Mono', 'Courier New', monospace;
   color:#1e6623;
   font-weight: 600;
+  margin-bottom: 2rem;
+  margin-top: 5rem;
 }
 
 .meetcoordinators::after {
@@ -452,6 +485,7 @@ main section {
 }
 
 .coordinator-photo {
+  margin-left:20px;
   max-width: 200px;
   width: 100%;
   border-radius: 12px;
@@ -504,3 +538,5 @@ main section {
     transform: translateX(-50%);
   }
 }
+
+

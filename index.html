@@ -118,3 +118,20 @@
   </footer>
 </body>
 </html>
+
+
+<script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      } else {
+        entry.target.classList.remove('visible'); // 👈 allows re-triggering
+      }
+    });
+  }, {
+    threshold: 0.1
+  });
+
+  document.querySelectorAll('.coordinator').forEach(el => observer.observe(el));
+</script>
