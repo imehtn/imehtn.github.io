@@ -12,6 +12,11 @@ html {
   overflow-x: hidden;
 }
 
+html, body {
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+}
+
 main {
   flex: 1; /* Pushes the footer to the bottom when content is short */
 }
@@ -30,15 +35,18 @@ header h1 {
   background: transparent;
   font-size: 1.5rem;
   font-weight: 600;
+  width: 100%
 }
 
 .footer {
+  width: 100vw; /* full viewport width */
+  max-width: 100%;
   background-color: #4e402b;
   color: white;
   text-align: center;
   padding: 1rem;
-  font-size: 1rem; 
-  margin-top: auto;
+  font-size: 1rem;
+  box-sizing: border-box;
 }
 
 h1 {
@@ -236,25 +244,52 @@ body {
 @media (max-width: 600px) {
   .wrapper {
     width: 100%;
-    min-height: auto;
     padding: 0;
     border-radius: 0;
+    overflow-x: scroll;
   }
 
   .wrapper .logo {
     flex: 0 0 100vw;
-    height: 200px; /* or any fixed height for better UX */
+    height: 180; /* or any fixed height for better UX */
   }
 
   .wrapper .logo img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    aspect-ratio: auto;
   }
 
   .wrapper .track {
-    animation-duration: 6; /* twice as fast */
+    animation-duration: 10s; /* twice as fast */
+  }
+
+  .scrolling-banner {
+    font-size: 1rem;
+    padding: 0.5em 1em;
+    white-space: nowrap;
+    overflow-x: auto;
+  }
+
+  .scrolling-content {
+    animation-duration: 12s; /* slightly faster for smaller screens */
+  }
+
+  .scrolling-content span {
+    word-spacing: 4rem;
+    padding-right: 4rem;
+  }
+
+    .coordinator {
+    padding: 1.25rem;
+    border-radius: 12px;
+  }
+
+  /* Slightly reduce the offset “shadow card” behind */
+  .coordinator::before {
+    top: 16px;
+    left: 16px;
+    border-radius: 12px;
   }
 
   .coordinator-content {
@@ -264,8 +299,9 @@ body {
   }
 
   .coordinator-photo {
-    max-width: 140px;
+    max-width: 120px;
     margin-bottom: 1rem;
+    border-radius: 10px;
   }
 
   .coordinator-text {
@@ -273,6 +309,9 @@ body {
     width: 100%;
     min-width: unset;
     padding: 0 1rem;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 0.5rem;
   }
 
   .coordinator-text p {
@@ -282,7 +321,8 @@ body {
   }
 
   .coordinator h2 {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem
   }
 }
 
@@ -428,14 +468,13 @@ main section {
 }
 
 
-
 .scrolling-banner {
   font-family: Arial, 'Inter', sans-serif;
   font-style: italic;
   font-weight: 100;
   font-size: 1.2rem;
   overflow: hidden;
-  background-color: white; 
+  background-color: rgb(214, 241, 214); 
   padding: 0.5em 0; 
   border-top-left-radius: 16px;
   border-top-right-radius: 16px;
