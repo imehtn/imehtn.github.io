@@ -254,11 +254,44 @@ body {
   }
 
   .wrapper .track {
-    animation-duration: 10s; /* twice as fast */
+    animation-duration: 6; /* twice as fast */
+  }
+
+  .coordinator-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .coordinator-photo {
+    max-width: 140px;
+    margin-bottom: 1rem;
+  }
+
+  .coordinator-text {
+    flex: none;
+    width: 100%;
+    min-width: unset;
+    padding: 0 1rem;
+  }
+
+  .coordinator-text p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0.75rem;
+  }
+
+  .coordinator h2 {
+    font-size: 1.5rem;
   }
 }
 
-
+@media (max-width: 1000px) {
+  .coordinator-grid {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+}
 
 .profile img {
   border-radius: 100px;
@@ -323,6 +356,8 @@ main section {
   gap: 1rem;
   justify-content: center;
   padding-top: 0.5rem;
+  max-width: 600px;  /* ✨ adjust this to your liking */
+  margin: 0 auto;    /* centers it */
 }
 
 .coordinator {
@@ -349,8 +384,18 @@ main section {
   box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
 }
 
+.meetcoordinators{
+  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  color:#1e6623;
+  font-weight: 600;
+}
+
+.meetcoordinators::after {
+  content: none;
+}
+
 .coordinator h2{
-  color: green;
+  color: #4e402b;
   font-family: 'JetBrains Mono', 'Courier New', monospace;;
   font-size: 2rem;
 }
@@ -408,8 +453,8 @@ main section {
 }
 
 .scrolling-content span {
-  word-spacing: 7rem; /* 👈 This adds space between words */
-  padding-right: 7rem; /* space between looped sections */
+  word-spacing: 7rem;
+  padding-right: 7rem; 
 }
 
 @keyframes scroll-left {
