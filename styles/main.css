@@ -478,11 +478,11 @@ main section {
 }
 
 .meetcoordinators{
-  font-family: 'JetBrains Mono', 'Courier New', monospace;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color:#1e6623;
-  font-weight: 600;
+  font-weight: 700;
   margin-bottom: 2rem;
-  margin-top: 5rem;
+  margin-top: 3rem;
 }
 
 .meetcoordinators::after {
@@ -491,8 +491,11 @@ main section {
 
 .coordinator h2{
   color: #4e402b;
-  font-family: 'JetBrains Mono', 'Courier New', monospace;;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: 2rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
 }
 
 .coordinator h2::after {
@@ -502,7 +505,7 @@ main section {
 .coordinator-content {
   display: flex;
   align-items: center;
-  gap: 2em;
+  gap:2em;
   flex-wrap: wrap;
 }
 
